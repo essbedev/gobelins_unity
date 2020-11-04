@@ -37,8 +37,8 @@ public class FadeAudio : MonoBehaviour
         {
             time += Time.deltaTime;
             progress = time / fadeDuration;
-            mixer.SetFloat("Ambiance1Volume", _toggle?(-80f*progress):(-80+80*progress));
-            mixer.SetFloat("Ambiance2Volume", _toggle?(-80+80*progress):(-80f*progress));
+            mixer.SetFloat("Ambiance1Volume", _toggle ? (-80f * progress) : (-80 + 80 * progress));
+            mixer.SetFloat("Ambiance2Volume", _toggle ? (-80 + 80 * progress) : (-80f * progress));
             yield return null;
         }
         _isFading = false;
